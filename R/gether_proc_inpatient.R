@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param collection_table
+#' @param codes
+#' @param primary
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_proc_inpatient <- function(collection_table, codes, primary) {
 
   collection_table %<>%

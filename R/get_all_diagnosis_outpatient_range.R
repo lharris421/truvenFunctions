@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param diagnosis
+#' @param source
+#' @param year
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_all_diagnosis_outpatient_range <- function(diagnosis, source, year, dates, range) {
 
   tab_name <- paste0(c("outpatient", diagnosis, source, year), collapse = "_")

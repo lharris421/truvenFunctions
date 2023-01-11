@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param collection_table
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_enrollee_detail <- function(collection_table) {
 
   collection_table %<>%

@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param collection_table
+#' @param codes
+#' @param keep_dates
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_associated_outpatient <- function(collection_table, codes, keep_dates) {
 
   collection_table %<>%

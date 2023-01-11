@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param collection_table
+#' @param dates
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_all_diagnosis_outpatient <- function(collection_table, dates) {
 
   collection_table %<>%

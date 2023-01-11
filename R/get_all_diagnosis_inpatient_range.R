@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param table
+#' @param diagnosis
+#' @param source
+#' @param year
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_all_diagnosis_inpatient_range <- function(table, diagnosis, source, year, dates, range) {
 
   tab_name <- paste0(c(table, diagnosis, source, year), collapse = "_")

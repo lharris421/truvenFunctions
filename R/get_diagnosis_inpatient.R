@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param table
+#' @param diagnosis
+#' @param source
+#' @param year
+#' @param codes
+#' @param primary
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_diagnosis_inpatient <- function(table, diagnosis, source, year, codes, primary = FALSE) {
 
   tab_name <- paste0(c(table, diagnosis, source, year), collapse = "_")

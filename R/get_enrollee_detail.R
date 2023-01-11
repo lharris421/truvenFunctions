@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param source
+#' @param year
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_enrollee_detail <- function(source, year) {
 
   tab_name <- paste0(c("enrollees", source, year), collapse = "_")

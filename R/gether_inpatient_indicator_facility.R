@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param all_tabs
+#' @param con
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_inpatient_indicator_facility <- function(all_tabs, con) {
 
   fac_tabs <- all_tabs[str_detect(all_tabs, "facility_core")]

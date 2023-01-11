@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param collection_table
+#' @param codes
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_outpatient_core <- function(collection_table, codes) {
 
   collection_table %<>%

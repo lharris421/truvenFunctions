@@ -1,3 +1,14 @@
+#' Title
+#'
+#' @param source
+#' @param year
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_proc_facility_range <- function(source, year, dates, range) {
 
   tab_name <- paste0(c("facility_proc", source, year), collapse = "_")

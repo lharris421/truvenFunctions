@@ -1,3 +1,13 @@
+#' Get all diagnoses from facility tables within a specified range from specific dates
+#'
+#' @param diagnosis
+#' @param source
+#' @param year
+#' @param dates
+#' @param range
+#'
+#' @return tab
+#' @export
 get_all_diagnosis_facility_range <- function(diagnosis, source, year, dates, range) {
 
   tab_name <- paste0(c("facility", diagnosis, source, year), collapse = "_")

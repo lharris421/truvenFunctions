@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param collection_table
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_all_diagnosis_facility_range <- function(collection_table, dates, range) {
 
   collection_table %<>%

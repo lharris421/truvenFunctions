@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param diagnosis
+#' @param source
+#' @param year
+#' @param codes
+#' @param keep_dates
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_associated_inpatient <- function(diagnosis, source, year, codes, keep_dates) {
 
   tab_name <- paste0(c("inpatient", diagnosis, source, year), collapse = "_")

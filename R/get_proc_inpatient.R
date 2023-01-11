@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param table
+#' @param source
+#' @param year
+#' @param codes
+#' @param primary
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_proc_inpatient <- function(table, source, year, codes, primary = FALSE) {
 
   tab_name <- paste0(c(table, "proc", source, year), collapse = "_")

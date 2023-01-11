@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param collection_table
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_outpatient_core_range <- function(collection_table, dates, range) {
 
   collection_table %<>%

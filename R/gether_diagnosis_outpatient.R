@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param collection_table
+#' @param codes
+#' @param primary
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gether_diagnosis_outpatient <- function(collection_table, codes, primary = FALSE) {
 
   collection_table %<>%

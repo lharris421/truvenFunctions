@@ -1,3 +1,14 @@
+#' Title
+#'
+#' @param source
+#' @param year
+#' @param dates
+#' @param range
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_outpatient_core_range <- function(source, year, dates, range) {
 
   tab_name <- paste0(c("outpatient_core", source, year), collapse = "_")
