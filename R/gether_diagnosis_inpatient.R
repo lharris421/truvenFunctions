@@ -34,12 +34,12 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
 
     tmp <- dplyr::tbl(db_con, tab_name) %>%
       dplyr::mutate(dx = as.character(dx)) %>%
-      dplyr::filter(is.null(codes) || dx %in% codes) %>%
       dplyr::filter(dx_num == 1 | primary == FALSE) %>%
       dplyr::inner_join(dplyr::tbl(db_con, cross) %>% dplyr::select(caseid, date = admdate, enrolid), by = "caseid") %>%
       dplyr::select(-caseid) %>%
       dplyr::collect(n = Inf) %>%
-      dplyr::mutate(dx = as.character(dx))
+      dplyr::mutate(dx = as.character(dx)) %>%
+      dplyr::filter(is.null(codes) || dx %in% codes)
 
     if (!is.null(dates)) {
 
