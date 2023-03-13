@@ -29,7 +29,6 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
     source <- inpatient_dx_tables[i,3]
     year <- inpatient_dx_tables[i,4]
     tab_name <- paste0(c(table, diagnosis, source, year), collapse = "_")
-    print(tab_name)
     cross <- paste0(c(table, "core", source, year), collapse = "_")
 
     tmp <- dplyr::tbl(db_con, tab_name) %>%
@@ -56,6 +55,6 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
 
   }
 
-  inpatient_dxs <- bind_rows(inpatient_dxs)
+  inpatient_dxs <- bind_rows(tmp)
 
 }
