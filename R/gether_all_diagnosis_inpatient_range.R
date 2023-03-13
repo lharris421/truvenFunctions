@@ -28,3 +28,5 @@ gether_all_diagnosis_inpatient_range <- function(collection_table, dates, range)
   return(tab)
 
 }
+
+
