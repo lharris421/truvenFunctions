@@ -53,9 +53,11 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
 
     }
 
+    print(tab_name)
+    print(tmp)
     inpatient_dxs[[i]] <- tmp
 
-    print(i)
+    ## print(i)
 
   }
 
