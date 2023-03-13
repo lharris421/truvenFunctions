@@ -59,7 +59,7 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
 
   }
 
-  inpatient_dxs <- bind_rows(tmp)
+  inpatient_dxs <- bind_rows(inpatient_dxs)
   return(inpatient_dxs)
 
 }
