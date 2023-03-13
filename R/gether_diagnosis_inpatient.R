@@ -18,7 +18,8 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
   colnames(inpatient_tables) <- c("table", "diagnosis", "source", "year")
 
   inpatient_dx_tables <- inpatient_tables %>%
-    filter(is.null(year_range) || year >= first_year & year <= last_year & str_detect(diagnosis, "dx"))
+    filter(is.null(year_range) || (year >= year_range[1] & year <= year_range[2])) %>%
+    filter(str_detect(diagnosis, "dx"))
 
   inpatient_dxs <- list()
   for (i in 1:nrow(inpatient_dx_tables)) {
@@ -34,7 +35,6 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
       dplyr::mutate(dx = as.character(dx)) %>%
       dplyr::filter(is.null(codes) || dx %in% codes) %>%
       dplyr::filter(dx_num == 1 | primary == FALSE) %>%
-      dplyr::select(caseid, dx_num, dx) %>%
       dplyr::inner_join(dplyr::tbl(db_con, cross) %>% dplyr::select(caseid, date = admdate, enrolid), by = "caseid") %>%
       dplyr::select(-caseid) %>%
       dplyr::collect(n = Inf) %>%
