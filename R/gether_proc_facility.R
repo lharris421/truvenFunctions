@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-gether_diagnosis_facility <- function(table_list, db_con, codes = NULL, dates = NULL, range = NULL, primary = FALSE, year_range = NULL) {
+gether_proc_facility <- function(table_list, db_con, codes = NULL, dates = NULL, range = NULL, primary = FALSE, year_range = NULL) {
 
   facility_tables <- table_list[str_detect(table_list, "facility")] %>%
     str_split("_")
