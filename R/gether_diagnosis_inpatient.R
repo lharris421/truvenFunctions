@@ -40,6 +40,7 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
       dplyr::filter(dx_num == 1 | primary == FALSE) %>%
       dplyr::inner_join(dplyr::tbl(db_con, cross) %>% dplyr::select(caseid, date = admdate, enrolid), by = "caseid") %>%
       dplyr::select(-caseid) %>%
+      dplyr::select(enrolid, date, dx_num, dx) %>%
       dplyr::collect(n = Inf) %>%
       dplyr::mutate(dx = as.character(dx)) %>%
       dplyr::filter(is.null(codes) | dx %in% codes)
@@ -48,7 +49,7 @@ gether_diagnosis_inpatient <- function(table_list, codes = NULL, dates = NULL, r
 
       tmp <- tmp %>%
         dplyr::left_join(dates, by = "enrolid") %>%
-        dplyr::mutate(days_within = index_date - admdate) %>%
+        dplyr::mutate(days_within = index_date - date) %>%
         dplyr::filter(days_within >= range[1] & days_within <= range[2])
 
     }
