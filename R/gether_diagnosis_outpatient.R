@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-gether_diagnosis_outpatient <- function(table_list, codes = NULL, dates = NULL, range = NULL, primary = FALSE, year_range = NULL) {
+gether_diagnosis_outpatient <- function(table_list, db_con, codes = NULL, dates = NULL, range = NULL, primary = FALSE, year_range = NULL) {
 
   outpatient_tables <- table_list[str_detect(table_list, "outpatient")] %>%
     str_split("_")
