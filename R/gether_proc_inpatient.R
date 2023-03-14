@@ -28,10 +28,10 @@ gether_proc_inpatient <- function(table_list, db_con, codes = NULL, dates = NULL
   inpatient_procs <- list()
   for (i in 1:nrow(inpatient_proc_tables)) {
 
-    table <- inpatient_dx_tables[i,1]
-    diagnosis <- inpatient_dx_tables[i,2]
-    source <- inpatient_dx_tables[i,3]
-    year <- inpatient_dx_tables[i,4]
+    table <- inpatient_proc_tables[i,1]
+    diagnosis <- inpatient_proc_tables[i,2]
+    source <- inpatient_proc_tables[i,3]
+    year <- inpatient_proc_tables[i,4]
     tab_name <- paste0(c(table, diagnosis, source, year), collapse = "_")
     cross <- paste0(c(table, "core", source, year), collapse = "_")
 
