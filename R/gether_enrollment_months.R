@@ -30,4 +30,6 @@ gether_enrollment_months <- function(table_list, db_con) {
 
   }
 
+  return(all_enrl)
+
 }
