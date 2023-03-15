@@ -65,7 +65,7 @@ gether_proc_facility <- function(table_list, db_con, codes = NULL, dates = NULL,
   for (i in 1:length(facility_core_tables)) {
 
     facility_facility_outpatient[[i]] <- tbl(db_con, facility_core_tables[i]) %>%
-      mutate(facility = ifelse(caseid == "", 0, 1)) %>%
+      mutate(inpatient = ifelse(caseid == "", 0, 1)) %>%
       select(fachdid, facility) %>%
       collect(n = Inf)
 
