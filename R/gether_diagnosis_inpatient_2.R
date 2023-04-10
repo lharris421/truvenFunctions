@@ -35,7 +35,8 @@ gether_diagnosis_inpatient_2 <- function(table_list, db_con, codes) {
       dplyr::inner_join(dplyr::tbl(db_con, cross) %>% dplyr::select(caseid, date = admdate, enrolid), by = "caseid") %>%
       dplyr::select(-caseid) %>%
       dplyr::select(enrolid, date, dx_num, dx) %>%
-      dplyr::collect(n = Inf)
+      dplyr::collect(n = Inf) %>%
+      dplyr::mutate(dx = as.character(dx))
 
     inpatient_dxs[[i]] <- tmp
 
